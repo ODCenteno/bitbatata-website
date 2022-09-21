@@ -1,0 +1,33 @@
+:root {
+    /* Brand Colors */
+    --bitcoin-orange: #F7931A;
+    --soft-orange: #FFE9D5;
+    --secondary-blue: #1A9AF7;
+    --soft-blue: #E7F5FF;
+    --warm-black: #201E1C;
+    --soft-black: #282623;
+    --grey: #BABABA;
+    --off-white: #FAF8F7;
+    --white: #fff;
+    /* Font Sizes */
+    --title: 2.4rem;
+    --subtitle: 1.8rem;
+    --p:1.6rem;
+    --small:1.4rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif; 
+}
+
+/* 
+font-family: 'DM Sans', sans-serif; 500, 700
+font-family: 'Inter', sans-serif; 400, 500, 700
+*/
