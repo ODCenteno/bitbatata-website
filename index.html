@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/tablet.css" media="(min-width: 930px)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
@@ -18,7 +19,7 @@
         </div>
         <div class="header__info-container">
             <h1 class="header__title">La próxima revolución en el intercambio de criptomonedas</h1>
-            <p class="header__description">Batatabit te ayuda a navegar entre los diferentes precios y tendencias.</p>
+            <p class="header__description">BitBatata te ayuda a navegar entre los diferentes precios y tendencias.</p>
             <a class="header__button" href="#plans">Conoce Nuestros Planes <span></span></a>
         </div>
     </header>
@@ -29,40 +30,34 @@
                 <h2>Visibilizamos todas las tasas de cambio</h2>
                 <p class="main-trading-container__description">Traemos información en tiempo real de las casas de cambio y las monedas más importantes del mundo.</p>
             </div>
-            <div class="main-trading-container__table">
+            <section class="main-tables-container">
                 <div class="main-currency-table">
-                    <div class="currency-title-div">
-                        <h3 class="currency-table__title">Monedas</h3>
-                        <div class="currency-table__container">
-                            <table>
-                                <tr>
-                                    <td class="table-top--left table__left">Bitcoin</td>
-                                    <td class="table-top--right table__right">$ 18,936.96<span class="down"></span></td>
-                                </tr>
-                                <tr>
-                                    <td class="table__left">Ethereum</td>
-                                    <td class="table__right">$ 1,315.49<span class="up"></span></td>
-                                </tr>
-                                <tr>
-                                    <td class="table__left">BNB</td>
-                                    <td class="table__right">$ 267.99<span class="down"></span></td>
-                                </tr>
-                                <tr>
-                                    <td class="table-bottom--left table__left">Cardano</td>
-                                    <td class="table-bottom--right table__right">$ 0.4446<span class="up"></span></td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="status-container__last-update"><p class="last-update__content"><b>Actualizado:</b> 19 Julio 23:45</p>
-                        </div>
+                    <h3 class="currency-table__title">Monedas</h3>
+                    <div class="currency-table__container">
+                        <table>
+                            <tr>
+                                <td class="table-top--left table__left">Bitcoin</td>
+                                <td class="table-top--right table__right">$ 18,936.96<span class="down"></span></td>
+                            </tr>
+                            <tr>
+                                <td class="table__left">Ethereum</td>
+                                <td class="table__right">$ 1,315.49<span class="up"></span></td>
+                            </tr>
+                            <tr>
+                                <td class="table__left">BNB</td>
+                                <td class="table__right">$ 267.99<span class="down"></span></td>
+                            </tr>
+                            <tr>
+                                <td class="table-bottom--left table__left">Cardano</td>
+                                <td class="table-bottom--right table__right">$ 0.4446<span class="up"></span></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="status-container__last-update"><p class="last-update__content"><b>Actualizado:</b> 19 Julio 23:45</p>
                     </div>
                 </div>
-            </div>
-            <section class="main-comission-container__table">
                 <div class="main-comission-table">
-                    <div class="comission-title-div">
-                        <h3 class="comission-table__title">Comisiones</h3>
-                    </div>
+                    <h3 class="comission-table__title">Comisiones</h3>
                     <div class="comission-table__container">
                         <table>
                             <tr>
@@ -166,7 +161,16 @@
         </section>
     </main>
     <footer>
-
+        <section class="footer-left">
+            <ul>
+                <li><a href="#">Linkedin</a></li>
+                <li><a href="#">Crunchbase</a></li>
+                <li><a href="#">Hackernews</a></li>
+            </ul>
+        </section>
+        <section class="footer-right">
+            <img src="../assets/img/logo-footer.svg" alt="Logo de BitBatata">
+        </section>
     </footer>
 </body>
 </html>

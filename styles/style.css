@@ -10,6 +10,7 @@
     --off-white: #FAF8F7;
     --white: #fff;
     /* Font Sizes */
+    --xtitle: 2.4rem;
     --title: 2rem;
     --subtitle: 1.8rem;
     --p:1.6rem;
@@ -109,6 +110,7 @@ font-family: 'Inter', sans-serif; 400, 500, 700
     height: 8px;
     margin-left: 8px;
     background-image: url('../assets/icons/down-arrow.svg');
+    cursor: pointer;
 }
 
 /* Main trading Section */
@@ -155,16 +157,27 @@ main {
     font-size: var(--small);
     line-height: 1.6rem;
 }
-.main-trading-container__table, .main-comission-container__table {
+
+/* Tables Container and Carousel */
+.main-tables-container {
+    display: flex;
+    gap: 16px;
+    overflow-x: scroll; /* crea scroll eje x */
+    overscroll-behavior-x: contain; /* comportamiento de scroll */
+    scroll-snap-type: x proximity; /* centrar elemento de scroll eje x */
+    margin: 0 26px;
+}
+/* .main-trading-container__table, .main-comission-container__table {
     min-width: 320px;
     height: auto;
-}
+} */
 /* Currency Table */
 .main-currency-table, .main-comission-table {
-    width: 85%;
-    min-width: 235px;
+    position: relative;
+    scroll-snap-align: center;
+    min-width: 272px;
     max-width: 500px;
-    height: 360px;
+    height: auto;
     margin: 0 auto;
     font-family: 'Inter', 'DM Sans';
 }
@@ -185,7 +198,7 @@ main {
     max-width: 300px;
     height: 250px;
     margin: 0 auto 24px;
-    box-shadow: 1px 1px 10px var(--grey);
+    box-shadow: 0px 1px 5px var(--grey);
     border-radius: 16px;
 }
 .currency-table__container table, .comission-table__container table {
@@ -206,23 +219,23 @@ main {
     width: 60%;
     height: 39px;
     padding: 10px 12px;
-    /* text-align: end; */
+    text-align: right;
     background-color: var(--white);
     color: var(--soft-black);
     font-size: var(--xs);
     line-height: 1.9rem;
 }
 
-.currency-table__container .table-top--left {
+.currency-table__container .table-top--left, .comission-table__container .table-top--left {
     border-radius: 15px 0 0 0;
 }
-.currency-table__container .table-top--right {
+.currency-table__container .table-top--right, .comission-table__container .table-top--right {
     border-radius: 0 15px 0 0;
 }
-.currency-table__container .table-bottom--left {
+.currency-table__container .table-bottom--left, .comission-table__container .table-bottom--left {
     border-radius: 0 0 0 15px;
 }
-.currency-table__container .table-bottom--right {
+.currency-table__container .table-bottom--right, .comission-table__container .table-bottom--right {
     border-radius: 0 0 15px 0; 
 }
 .currency-table__container .down {
@@ -252,6 +265,10 @@ main {
     margin: 4px auto 0;
     background: var(--soft-orange);
     border-radius: 8px;
+}
+
+.main-comission-table .status-container__last-update {
+    background: var(--soft-blue);
 }
 .last-update__content {
     font-size: var(--xs);
@@ -420,7 +437,7 @@ main {
     position: relative;
     scroll-snap-align: center; /* Animación que lleva la tarjeta al centro */
     width: 70%;
-    min-width: 250px;
+    min-width: 210px;
     max-width: 320px;
     min-height: 247px;
     padding: 24px 16px;
@@ -441,11 +458,18 @@ main {
     left: calc(50% - 60px);
     width: 120px;
     height: 32px;
-    padding: 8px;
+    padding: 6px;
     font-size: var(--xs);
     color: var(--white);
     background-color: var(--bitcoin-orange);
     border-radius: 8px;
+}
+.left-price-card .recomendado {
+    padding: 5px;
+    color: var(--warm-black);
+    font-weight: bold;
+    background-color: var(--white);
+    border: 1px solid var(--bitcoin-orange);
 }
 .plan-card__title {
     margin: 16px 0;
@@ -482,6 +506,7 @@ main {
     border: 2px solid var(--bitcoin-orange);
     border-radius: 4px;
     line-height: 1.8rem;
+    cursor: pointer;
 }
 .plan-card__cta span {
     display: inline-block;
@@ -492,4 +517,33 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     vertical-align: text-bottom;
+}
+footer {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    padding: 40px 24px;
+    background: var(--bitcoin-orange);
+}
+footer section {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .footer-left ul {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    list-style: none;
+}
+
+.footer-left li {
+    margin: 10px 0;
+    cursor: pointer;
+}
+.footer-left a {
+    text-decoration: none;
+    color: var(--white);
 }
