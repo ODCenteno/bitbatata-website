@@ -6,7 +6,7 @@
     --soft-blue: #E7F5FF;
     --warm-black: #201E1C;
     --soft-black: #282623;
-    --grey: #BABABA;
+    --grey: #9b9a99;
     --off-white: #FAF8F7;
     --white: #fff;
     /* Font Sizes */
@@ -57,6 +57,7 @@ font-family: 'Inter', sans-serif; 400, 500, 700
     margin: 32px 0;
 }
 .header-logo__icon {
+    width: 40px;
     height: 24px;
     margin: 0 4px;
 }
@@ -363,21 +364,21 @@ main {
     font-weight: 700;
     font-size: var(--p);
     line-height: 1.8rem;
-    color: var(--white);
+    color: var(--soft-orange);
 }
 .product-card__body {
     font-size: var(--xs);
     font-weight: 500;
     font-style: normal;
     line-height: 1.8rem;
-    color: var(--grey);
+    color: var(--off-white);
 }
 
 .bitcoin-img-container {
     width: 100%;
     min-width: 320px;
     height: 50vh;
-    background-image: url(../assets/img/bitcoinbaby2x.jpg);
+    background-image: url(../assets/img/bitcoinbaby2x.webp);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
